@@ -1,9 +1,15 @@
+/* Reset CSS padding and margin */ 
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+/* CSS Variables for colors and styles 
+This allows for easy theme changes and consistent 
+styling across the application */
 
 :root{
     --background-operation: #48e;
@@ -13,6 +19,9 @@
     --color-btn: #292a2a;
 }
 
+
+/* Main body styles*/
+
 body{
     background: radial-gradient(#eee 0%, #eee 30%, var(--background-operation) 100%);
     height: 100vh;
@@ -20,6 +29,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+/* Calculator container styles. This container
+ holds the calculator and centers it on the page */
 
 .container-calculator{
     background-color: var(--color-calculator);
@@ -36,6 +48,9 @@ body{
     box-shadow: 0 0 35px var(--color-btn);
 }
 
+/* Screen styles for the calculator. This is where
+ the input and results are displayed */
+
 .screen-calculator{
     background-color: var(--color-screen);
     height: 5rem;
@@ -46,11 +61,15 @@ body{
     display: flex;
     align-items: center;    
     color: var(--color-text);
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: right;
     text-transform: uppercase;
     padding: 0 1rem;
+    box-shadow: 0 0 10px 3px var(--color-btn);
 }
+
+/* Container for the buttons of the calculator.
+ This uses CSS Grid to layout the buttons in a grid format */
 
 .container-button{
     display: grid;
@@ -61,7 +80,11 @@ body{
     gap: .2rem;
 }
 
+/* Button styles for the calculator. These buttons
+ are styled to be visually appealing and interactive */
+
 .btn-calculator{
+    background-color: rgba(255, 255, 255, .5);
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -74,26 +97,35 @@ body{
     color: var(--color-btn);
     cursor: pointer;
     transition: transform 150ms;
+    box-shadow: 0 0 10px 1px var(--color-btn);
 }
 
+/* Tansistion effects for the buttons to enhance user experience */
 .btn-calculator:hover{
     transform: scale(1.05);
 }
 
+/* Change the color of the button when it is active */
 .btn-calculator:active{
-    color: #eee;
+    color: #fff;
 }
 
+/* Specific styles for the operation buttons. These
+ buttons are styled differently to distinguish them from 
+ the number buttons */
 .operation{
     background-color: var(--background-operation);
     font-size: 1.2rem;
     font-weight: 200;
 }
 
+/* specific styles for the operation button that spans two columns */
 .operation:nth-last-child(1){
     grid-column: span 2;
 }
 
+/* Media queries for responsive design. These styles
+ adjust the layout and size of the calculator for larger screens */
 @media (min-width:622px) {
     .container-calculator{
         height: auto;
