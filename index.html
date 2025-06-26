@@ -10,26 +10,30 @@
 
 <body>
     <div class="container-calculator">
-        <div class="screen-calculator"></div>
+        <input type="text" id="screen" class="screen-calculator" disabled placeholder="0">
         <div class="container-button">
-            <div class="btn-calculator" value="7">7</div>
-            <div class="btn-calculator" value="8">8</div>
-            <div class="btn-calculator" value="9">9</div>
-            <div class="btn-calculator operation" value="/">/</div>
-            <div class="btn-calculator" value="4">4</div>
-            <div class="btn-calculator" value="5">5</div>
-            <div class="btn-calculator" value="6">6</div>
-            <div class="btn-calculator operation" value="x">X</div>
-            <div class="btn-calculator" value="1">1</div>
-            <div class="btn-calculator" value="2">2</div>
-            <div class="btn-calculator" value="3">3</div>
-            <div class="btn-calculator operation" value="-">-</div>
-            <div class="btn-calculator" value=".">.</div>
-            <div class="btn-calculator" value="0">0</div>
-            <div class="btn-calculator operation" value="=">=</div>
-            <div class="btn-calculator operation" value="+">+</div>
+            <button id="C" class="btn-calculator operation">C</button>
+            <button id="DEL" class="btn-calculator operation">DEL</button>
+            <button id="." class="btn-calculator operation">.</button>
+            <button id="/" class="btn-calculator operation">/</button>
+            <button id="7" class="btn-calculator">7</button>
+            <button id="8" class="btn-calculator">8</button>
+            <button id="9" class="btn-calculator">9</button>
+            <button id="*" class="btn-calculator operation" value="*">x</button>
+            <button id="4" class="btn-calculator">4</button>
+            <button id="5" class="btn-calculator">5</button>
+            <button id="6" class="btn-calculator">6</button>
+            <button id="-" class="btn-calculator operation">-</button>
+            <button id="1" class="btn-calculator">1</button>
+            <button id="2" class="btn-calculator">2</button>
+            <button id="3" class="btn-calculator">3</button>
+            <button id="+" class="btn-calculator operation">+</button>
+            <button id="0" class="btn-calculator">0</button>
+            <button id="00" class="btn-calculator">00</button>   
+            <button id="=" class="btn-calculator operation">=</button>
         </div>
     </div>
+    <script src="/assets/javascript/script.js"></script>
 </body>
 
 </html>
